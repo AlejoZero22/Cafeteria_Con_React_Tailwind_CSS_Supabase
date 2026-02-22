@@ -1,13 +1,20 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RootLayout from "./layouts/RootLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-white">
-        Cafeteria Vip Para Todos 😎
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route path="/" element={<Home />}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/Register" element={<Register />}/>
+        </Route>
+      </Routes>
+    
+    </BrowserRouter>
   )
 }
-
-export default App

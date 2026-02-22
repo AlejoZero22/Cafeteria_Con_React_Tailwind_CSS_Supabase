@@ -1,0 +1,10 @@
+se hace instalasion del Esqueleto del propyecto el cual tiene react+tailwind 
+se mejora la extructura y se elimina codigo predeterminado del esqueleto el cual no servia para mi pagina. 
+se crean carpetas como layout y su archivo rootLayout antes estaba el MainLayout pero este fue cambiado debiado a que era 
+arvhico mas estandar al que requeria ya que este es para barios layout y para usuarios normal a diferencia del rootLayout que sirve 
+para el layout raiz este envuelve toda la app archivos mas globales como navbar, footer.
+se instala el Routter y se configura en app.jsx en la importancion de app.jsx escribo la siguiente linea  BrowserRouter
+esta ayuda a sincronizar la interfaz de usuario con la URL navegador permitiendo la navegación 
+entre componentes sin recargar la página completa.
+se crea el documento Navbar para la barra superior de mi pagina web esto manejaria el menu principal, acceso a rutas,
+punto de navegacion en general
