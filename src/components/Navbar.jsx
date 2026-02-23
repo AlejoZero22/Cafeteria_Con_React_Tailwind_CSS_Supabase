@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { supabase } from "../lib/supabaseClient";
+import { useAuth } from "../context/AuthContext";
 
 function Navbar() {
 
@@ -9,7 +11,6 @@ function Navbar() {
     return (
         <nav className="flex justify-between p-4 bg-gray-200">
             <Link to="/">Home</Link>
-            
 
             <div>
                 {!session ? (
