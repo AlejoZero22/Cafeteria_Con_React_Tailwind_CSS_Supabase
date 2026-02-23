@@ -21,4 +21,4 @@ Se crea una carpeta llamada context la cual nos va ayudar a tener una mejor orga
 una persona que haya creado una cuenta pueda ver los productos que se manejan en nuestra tienda y a esto le vamos a implementar un listener que va de la mano con los antes 
 ya mencionados a validar que pasa con la Cuenta de X usuario si la sesion expira que lo saque de los productos o si inicia sesion en otra pagina o navegador
 
-tambien editamos main.jsx para envolver toda la pagina en el autocontext para las validaciones ya mensionadas de las cuentas que sean creadas 
+tambien editamos main.jsx para envolver toda la pagina en el authocontext para las validaciones ya mensionadas de las cuentas que sean creadas 

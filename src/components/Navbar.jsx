@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <nav className="flex justify-between p-4 bg-gray-200">
             <Link to="/">Home</Link>
-            <h1 className="font-bold text-lg">Coffe Vip</h1>
+            
 
             <div>
                 {!session ? (

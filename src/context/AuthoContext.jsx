@@ -1,9 +1,9 @@
 import { createContext, useContext, UseEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
 
-const AutoContext = createContext()
+const AuthoContext = createContext()
 
-export function AutoProvider({ children }) {
+export function AuthoProvider({ children }) {
     const [session, setSession] = useState(null)
     const [loading, setLoading] = useState(true)
 
@@ -23,12 +23,12 @@ export function AutoProvider({ children }) {
     }, [])
 
     return (
-        <AutoContext.Provider value={{session, loading}}>
+        <AuthoContext.Provider value={{session, loading}}>
             {children}
-        </AutoContext.Provider>
+        </AuthoContext.Provider>
     )
 }
 
-export function useAuto() {
-    return useContext(AutoContext)
+export function useAuth() {
+    return useContext(AuthoContext)
 }
