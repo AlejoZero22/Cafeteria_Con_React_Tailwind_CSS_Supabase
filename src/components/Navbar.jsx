@@ -1,14 +1,28 @@
 import { Link } from "react-router-dom";
 
 function Navbar() {
+
+    const { session } = useAuth()
+    const handleLogout = async() => {
+        await supabase.auth.signOut()
+    }
     return (
-        <nav className="bg-gray-900 text-white px-6 py-4 flex justify-between">
+        <nav className="flex justify-between p-4 bg-gray-200">
+            <Link to="/">Home</Link>
             <h1 className="font-bold text-lg">Coffe Vip</h1>
 
             <div>
-                <Link to="/" className="hover:text-gray-300">Home</Link>
-                <Link to="/login" className="hover:text-gray-300">Login</Link>
-                <Link to="/register" className="hover:text-gray-300">Register</Link>
+                {!session ? (
+                    <>
+                        <Link to="/login" className="mr-4">Login</Link>
+                        <Link to="/register">Register</Link>
+                    </>
+                ) : (
+                    <>
+                        <Link to="/Productos" className="mr-4">Productos</Link>
+                        <button onClick={handleLogout}>Logout</button>
+                    </>
+                )}
             </div>
         </nav>
     )
