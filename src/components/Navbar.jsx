@@ -20,8 +20,8 @@ function Navbar() {
                     </>
                 ) : (
                     <>
-                        <Link to="/Productos" className="mr-4">Productos</Link>
-                        <button onClick={handleLogout}>Logout</button>
+                        <Link to="/productos" className="mr-4">Productos</Link>
+                        <button onClick={handleLogout} className="bg-red-500 text-white px-3 py-1 rounded z-50">Cerrar Sesion</button>
                     </>
                 )}
             </div>
