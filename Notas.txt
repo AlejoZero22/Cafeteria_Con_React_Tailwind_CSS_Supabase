@@ -34,4 +34,6 @@ se hace nueva configuracion en Navbar ya que la estructura anterior estaba mal d
 return () => {
   subscription.unsubscribe();
 }; esto hace que cuando una cuenta engrese esto hace el efecto de limpiar cada sesion abierta o cerrada haciendo que no haya bugs como elq ue tenia de
-no poder entrar a la pagina de productos cuando iniciaba sesion 
+no poder entrar a la pagina de productos cuando iniciaba sesion
+
+Se crea un archivo llamado hero.jsx este nos ayuda a darle mejor visibilidad a nuestra pagina visualmente a que sea mas llamativa  
