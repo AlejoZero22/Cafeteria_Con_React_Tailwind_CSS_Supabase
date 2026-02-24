@@ -18,25 +18,25 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between p-4 bg-gray-200">
+    <nav className="bg-[#1c1c1c] text-[#f5E6D3] px-8 py-4 flex justify-between items-center shadow-md">
       <Link to="/">Home</Link>
 
-      <div>
+      <div className="flex items-center space-x-6 text-sm uppercase tracking-wider">
         {!session ? (
           <>
-            <Link to="/login" className="mr-4">
+            <Link to="/login" className="hover:text-[#6F4E37] transition">
               Login
             </Link>
-            <Link to="/register">Register</Link>
+            <Link to="/register" className="border border-[#F5E6D3] px-4 py-1 rounded-full hover:bg-[#F5E6D3] hover:text-[#1C1C1C] transition">Register</Link>
           </>
         ) : (
           <>
-            <Link to="/productos" className="mr-4">
+            <Link to="/productos" className="hover:text-[#6F4E37] transition">
               Productos
             </Link>
             <button
               onClick={handleLogout}
-              className="bg-red-500 text-white px-3 py-1 rounded z-50">Cerrar Sesion</button>
+              className="border border-red-400 px-4 py-1 rounded-full hover:bg-red-500 hover:text-white transition">Cerrar Sesion</button>
           </>
         )}
       </div>

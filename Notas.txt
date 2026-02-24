@@ -22,3 +22,16 @@ una persona que haya creado una cuenta pueda ver los productos que se manejan en
 ya mencionados a validar que pasa con la Cuenta de X usuario si la sesion expira que lo saque de los productos o si inicia sesion en otra pagina o navegador
 
 tambien editamos main.jsx para envolver toda la pagina en el authcontext para las validaciones ya mensionadas de las cuentas que sean creadas 
+se hace nueva configuracion en Navbar ya que la estructura anterior estaba mal debido a la implementacion de supabase y de tener const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+    setSession(currentSession)
+    setLoading(false) esto paso a tener const {
+  data: { subscription },
+} = supabase.auth.onAuthStateChange((_event, session) => {
+  setSession(session);
+  setLoading(false);
+});
+
+return () => {
+  subscription.unsubscribe();
+}; esto hace que cuando una cuenta engrese esto hace el efecto de limpiar cada sesion abierta o cerrada haciendo que no haya bugs como elq ue tenia de
+no poder entrar a la pagina de productos cuando iniciaba sesion 
