@@ -13,12 +13,21 @@ function Register() {
         }
     
 
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
         email,password,
         })
         if (error) {
             setMessage(error.message)
         } else {
+
+            if (data.user) {
+                await supabase.from("profiles").insert([
+                    {
+                        id: data.user.id,
+                        role: "user",
+                    }
+                ])
+            }
             setMessage("Cuenta creada Exitosamente... Almenos haces algo bien")
         }
     }

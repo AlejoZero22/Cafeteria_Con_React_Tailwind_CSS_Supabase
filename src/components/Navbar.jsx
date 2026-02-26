@@ -3,7 +3,7 @@ import { supabase } from "../lib/supabaseClient";
 import { useAuth } from "../context/AuthContext";
 
 function Navbar() {
-  const { session } = useAuth();
+  const { session, } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = async () => {
