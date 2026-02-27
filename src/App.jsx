@@ -4,7 +4,9 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Productos from "./pages/Productos";
+import AdminOrders from "./pages/AdminOrders";
 import ProtectedRoute from "./components/ProtectedRoute";
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login />}/>
           <Route path="/register" element={<Register />}/>
           <Route path="/productos" element={<ProtectedRoute> <Productos /> </ProtectedRoute>} />
+          <Route path="/admin" element={<AdminOrders />} />
         </Route>
       </Routes>
     </BrowserRouter>

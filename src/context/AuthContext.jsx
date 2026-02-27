@@ -9,8 +9,7 @@ export function AuthProvider({ children }) {
   const [role, setRole] = useState(null);
 
   const fetchUserRole = async (userId) => {
-    console.log("Buscando rol para:", userId);
-    const { data, error } = await supabase.from("profiles").select("role").eq("id", userId).maybeSingle();
+     const { data, error } = await supabase.from("profiles").select("role").eq("id", userId).maybeSingle();
     if (!error && data) {
       setRole(data.role);
     }

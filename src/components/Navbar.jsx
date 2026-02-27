@@ -3,8 +3,9 @@ import { supabase } from "../lib/supabaseClient";
 import { useAuth } from "../context/AuthContext";
 
 function Navbar() {
-  const { session, } = useAuth();
+  const { session, role } = useAuth();
   const navigate = useNavigate();
+  
 
   const handleLogout = async () => {
     const { error } = await supabase.auth.signOut();
@@ -34,6 +35,11 @@ function Navbar() {
             <Link to="/productos" className="hover:text-[#6F4E37] transition">
               Productos
             </Link>
+              {role === "admin" && (
+                <Link to="/admin" className="ml-4 text-green-500 font-semibold">
+                  Panel Admin
+                </Link> 
+              )}
             <button
               onClick={handleLogout}
               className="border border-red-400 px-4 py-1 rounded-full hover:bg-red-500 hover:text-white transition">Cerrar Sesion</button>
