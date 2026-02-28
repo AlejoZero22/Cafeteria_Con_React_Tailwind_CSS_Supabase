@@ -35,7 +35,7 @@ export default function AdminOrders() {
       <h1 className="text-2xl font-bold mb-4">Panel de Pedidos</h1>
 
       {orders.map((order) => (
-        <div key={order.id} className="border p-4 rounded mb-3 flex justify-between items-center">
+        <div key={order.id} className={`mb-4 rounded transition ${order.status === "lista" ? "bg-green-700" : "bg-green-800"}`}>
           <div>
             <p><strong>Producto:</strong> {order.product_name}</p>
             <p><strong>Tipo:</strong> {order.type}</p>
